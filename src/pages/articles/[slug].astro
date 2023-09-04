@@ -1,0 +1,21 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import { newtClient } from '../../lib/newt'
+import type { Article } from '../../lib/newt'
+
+const client = newtClient
+const article = await client.getFirstContent<Article>({
+  appUid: 'blog',
+  modelUid: 'article',
+  query: {
+    slug: Astro.params.slug,
+  },
+})
+---
+
+<Layout title={article?.title || ''} description="投稿詳細ページです">
+  <main>
+    <h2>{article?.title}</h2>
+    <article set:html={article?.body} />
+  </main>
+</Layout>

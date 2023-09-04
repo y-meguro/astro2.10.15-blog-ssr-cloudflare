@@ -1,0 +1,30 @@
+{
+  "name": "astro2.10.15-blog-ssr-cloudflare",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint:eslint": "eslint ./src",
+    "lint:prettier": "prettier --check ./src",
+    "fix:eslint": "eslint --fix ./src",
+    "fix:prettier": "prettier --write ./src"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^7.0.0",
+    "@vespaiach/axios-fetch-adapter": "^0.3.1",
+    "astro": "^2.10.15",
+    "newt-client-js": "^3.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.7",
+    "@typescript-eslint/parser": "^5.58.0",
+    "eslint": "^8.38.0",
+    "eslint-plugin-astro": "^0.26.1",
+    "prettier": "^2.8.7",
+    "prettier-plugin-astro": "^0.8.0"
+  }
+}
